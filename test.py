@@ -16,7 +16,7 @@ def SendMess(mess):
 def generateMnemonicAndAddress():
     mnemo = Mnemonic("english")
     
-    mnemonic = mnemo.generate(random.choice([128,256]))
+    mnemonic = mnemo.generate(128))
     web3.eth.account.enable_unaudited_hdwallet_features()
     account = web3.eth.account.from_mnemonic(
         mnemonic,
